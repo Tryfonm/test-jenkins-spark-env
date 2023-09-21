@@ -14,7 +14,6 @@ if __name__ == "__main__":
     num_rows = 100
     synthetic_data = generate_synthetic_data(spark, num_rows)
 
-    print("\n---------------\nOriginalDataset")
     synthetic_data.show()
 
     # Add a rank column based on salary
@@ -27,7 +26,6 @@ if __name__ == "__main__":
         .agg(avg("Salary").cast("bigint").alias("AverageSalary"))\
         .orderBy(desc("AverageSalary"))
 
-    print("\n----------------\nProcessedDataset")
     grouped_by_age_ordered.show()
 
     grouped_by_age_ordered.write\
