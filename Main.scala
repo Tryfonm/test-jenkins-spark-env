@@ -11,7 +11,7 @@ object Main {
       .master("local[*]")
       .getOrCreate()
 
-    val numRows = 100
+    val numRows = 1000000
     val syntheticData: DataFrame = generateSyntheticData(spark, numRows)
 
     syntheticData.show()

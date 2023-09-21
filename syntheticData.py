@@ -11,7 +11,7 @@ if __name__ == "__main__":
     # Create a SparkSession
     spark = SparkSession.builder.appName("SyntheticData").getOrCreate()
 
-    num_rows = 100
+    num_rows = 1000000
     synthetic_data = generate_synthetic_data(spark, num_rows)
 
     synthetic_data.show()
