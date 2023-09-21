@@ -34,7 +34,7 @@ object Main {
     groupedByAgeOrdered.write
       .format("parquet")
       .mode("overwrite")
-      .save("./src/main/output/")
+      .save("./output/")
     spark.stop()
 
   }

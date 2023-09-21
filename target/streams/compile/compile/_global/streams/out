@@ -1,0 +1,41 @@
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:1:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.log4j.{Level, LogManager, Logger}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:2:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.{SparkSession, DataFrame}[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:3:12: object apache is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.apache.spark.sql.functions._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:8:17: not found: value SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m    val spark = SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:15:24: not found: type DataFrame[0m
+[0m[[0m[31merror[0m] [0m[0m    val syntheticData: DataFrame = generateSyntheticData(spark, numRows)[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:42:65: not found: type DataFrame[0m
+[0m[[0m[31merror[0m] [0m[0m  def generateSyntheticData(spark: SparkSession, numRows: Int): DataFrame = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:42:36: not found: type SparkSession[0m
+[0m[[0m[31merror[0m] [0m[0m  def generateSyntheticData(spark: SparkSession, numRows: Int): DataFrame = {[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:46:8: value toDF is not a member of scala.collection.immutable.Range.Inclusive[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value toDF'?[0m
+[0m[[0m[31merror[0m] [0m[0m      .toDF("ID")[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:47:27: not found: value concat[0m
+[0m[[0m[31merror[0m] [0m[0m      .withColumn("Name", concat(lit("User_"), col("ID")))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:47:34: not found: value lit[0m
+[0m[[0m[31merror[0m] [0m[0m      .withColumn("Name", concat(lit("User_"), col("ID")))[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:47:48: not found: value col[0m
+[0m[[0m[31merror[0m] [0m[0m      .withColumn("Name", concat(lit("User_"), col("ID")))[0m
+[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:48:27: not found: value rand[0m
+[0m[[0m[31merror[0m] [0m[0m      .withColumn("Age", (rand() * 50 + 18).cast("int"))[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/tryfonm/scala-notes/spark-template/test-jenkins-spark-env/Main.scala:49:30: not found: value rand[0m
+[0m[[0m[31merror[0m] [0m[0m      .withColumn("Salary", (rand() * 50000 + 30000).cast("bigint"))[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m13 errors found[0m

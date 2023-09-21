@@ -18,7 +18,7 @@ if __name__ == "__main__":
     synthetic_data.show()
 
     # Add a rank column based on salary
-    ordered_data = filtered_data\
+    ordered_data = synthetic_data\
         .orderBy(desc("Salary"))\
         .withColumn("HighSalary", col("Salary") >= 50000)
 
@@ -30,10 +30,9 @@ if __name__ == "__main__":
     print("\n----------------\nProcessedDataset")
     grouped_by_age_ordered.show()
 
-    output_path = "./src/main/output/"
     grouped_by_age_ordered.write\
         .format("parquet")\
         .mode("overwrite")\
-        .save(output_path)
+        .save("./output/")
 
     spark.stop()
